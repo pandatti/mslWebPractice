@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的个人简介</title>
+    <!-- 内嵌式CSS：style标签写在head中 -->
+    <style>
+        /* 全局重置：消除浏览器默认的margin/padding，统一盒模型 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* 内边距/边框不会撑大元素宽度 */
+        }
+
+        /* 元素选择器：给body设置全局字体、行高、背景色，避免内容贴边 */
+        body {
+            font-family: "Microsoft Yahei", "微软雅黑", sans-serif; /* 字体：优先微软雅黑，兼容不同系统 */
+            font-size: 16px; /* 基础字体大小 */
+            line-height: 1.8; /* 行高：让文字行间距更舒适，解决拥挤 */
+            color: #333; /* 全局文字主色：深灰色（比纯黑更柔和） */
+            background-color: #f9f9f9; /* 页面背景色：浅灰色，避免纯白刺眼 */
+            padding: 0 20px; /* 左右内边距：让页面内容不贴浏览器边缘 */
+        }
+
+        /* 元素选择器：美化头部header */
+        header {
+            background-color: #4285f4; /* 头部背景色：谷歌蓝 */
+            color: white; /* 头部文字白色 */
+            padding: 30px 20px; /* 上下30px、左右20px内边距：内部内容不拥挤 */
+            margin: 20px 0; /* 上下20px外边距：和导航栏拉开距离 */
+            border-radius: 8px; /* 圆角：更美观 */
+            text-align: center; /* 文字居中 */
+        }
+
+        /* 元素选择器：美化导航nav */
+        nav {
+            background-color: #333;
+            padding: 15px; /* 内边距：导航链接不贴边 */
+            margin: 10px 0 20px; /* 上下外边距：和上下元素拉开距离 */
+            border-radius: 8px;
+            text-align: center;
+        }
+        /* 后代选择器：选中nav里的所有a标签（嵌套选择） */
+        nav a {
+            color: white;
+            text-decoration: none; /* 去掉链接下划线 */
+            margin: 0 15px; /* 链接之间的外边距：避免挤在一起 */
+            font-size: 18px; /* 导航字体稍大，更醒目 */
+        }
+        /* 伪类：鼠标悬停时链接变色，提升交互 */
+        nav a:hover {
+            color: #4285f4;
+        }
+
+        /* 元素选择器：美化主体main */
+        main {
+            max-width: 1000px; /* 限制主体宽度，避免大屏下内容太宽 */
+            margin: 0 auto; /* 水平居中 */
+        }
+
+        /* 类选择器：给所有section统一样式（可复用） */
+        .content-card {
+            background-color: white; /* 白色背景，和页面背景区分 */
+            padding: 25px; /* 内边距：内部文字不贴边 */
+            margin-bottom: 25px; /* 底部外边距：区块之间拉开距离 */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 轻微阴影，提升层次感 */
+        }
+
+        /* ID选择器：单独美化“个人介绍”区块（唯一元素） */
+        #intro {
+            border-left: 5px solid #4285f4; /* 左侧彩色边框，突出重点 */
+        }
+
+        /* 元素选择器：美化标题 */
+        h2 {
+            color: #2d3748; /* 标题深色 */
+            font-size: 22px;
+            margin-bottom: 15px; /* 标题和正文拉开距离 */
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee; /* 底部分隔线，区分标题和内容 */
+        }
+
+        /* 元素选择器：美化列表 */
+        ul {
+            margin-left: 20px; /* 列表缩进，更易读 */
+            color: #4a5568; /* 列表文字稍浅，突出正文 */
+        }
+
+        /* 元素选择器：美化底部footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin: 30px 0 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 14px; /* 底部字体稍小 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>张三</h1>
+        <p>前端开发工程师 | 热爱技术，持续学习</p>
+    </header>
+
+    <nav>
+        <a href="#intro">个人介绍</a>
+        <a href="#skills">技能清单</a>
+        <a href="#experience">项目经历</a>
+        <a href="#contact">联系方式</a>
+    </nav>
+
+    <main>
+        <!-- 给section加类名content-card，复用统一样式 -->
+        <section id="intro" class="content-card">
+            <h2>个人介绍</h2>
+            <p>大家好，我是张三，从事前端开发工作3年，擅长HTML5、CSS3、JavaScript等技术栈，熟悉Vue、React框架，致力于打造高效、美观、易用的前端页面。</p>
+            <p>性格开朗，具备良好的团队协作能力，喜欢在技术社区分享自己的学习心得，也乐于接受具有挑战性的开发任务。</p>
+        </section>
+
+        <section id="skills" class="content-card">
+            <h2>技能清单</h2>
+            <ul>
+                <li>前端基础：HTML5（语义化标签）、CSS3（Flex/Grid）、JavaScript（ES6+）</li>
+                <li>前端框架：Vue3 + Vite、React + React Router</li>
+                <li>工程化：Webpack、Git、Eslint</li>
+                <li>其他：响应式布局、移动端开发、简单后端接口对接</li>
+            </ul>
+        </section>
+
+        <section id="experience" class="content-card">
+            <h2>项目经历</h2>
+            <h3>企业官网重构项目</h3>
+            <p>负责将传统企业官网重构为语义化结构，优化页面加载速度30%，适配移动端设备，提升用户体验。</p>
+            <h3>管理系统前端开发</h3>
+            <p>基于Vue3 + Element Plus开发后台管理系统，实现数据展示、增删改查、权限控制等功能。</p>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>联系方式：138XXXX1234 | zhangsan@example.com</p>
+        <p>© 2025 张三 版权所有</p>
+    </footer>
+</body>
+</html>
