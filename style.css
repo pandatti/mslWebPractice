@@ -42,6 +42,10 @@ nav a:hover {
     color: #4285f4;
 }
 
+nav a:active{
+    color: blueviolet;
+}
+
 main {
     max-width: 1000px;
     margin: 0 auto;
