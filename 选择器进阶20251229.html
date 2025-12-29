@@ -1,54 +1,71 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>我的个人简介</title>
     <!-- 外部式CSS：通过link标签引入style.css文件 -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
     <!-- HTML结构和内嵌式版本完全一致，无需修改 -->
     <header>
-        <h1>张三</h1>
-        <p>前端开发工程师 | 热爱技术，持续学习</p>
+      <h1>张三</h1>
+      <p>前端开发工程师 | 热爱技术，持续学习</p>
     </header>
 
-    <nav>
-        <a href="#intro">个人介绍</a>
-        <a href="#skills">技能清单</a>
-        <a href="#experience">项目经历</a>
-        <a href="#contact">联系方式</a>
+    <nav id="main-nav">
+      <a href="#intro">个人介绍</a>
+      <a href="#skills">技能清单</a>
+      <a href="#experience">项目经历</a>
+      <a href="#contact">联系方式</a>
     </nav>
 
     <main>
-        <section id="intro" class="content-card">
-            <h2>个人介绍</h2>
-            <p>大家好，我是张三，从事前端开发工作3年，擅长HTML5、CSS3、JavaScript等技术栈，熟悉Vue、React框架，致力于打造高效、美观、易用的前端页面。</p>
-            <p>性格开朗，具备良好的团队协作能力，喜欢在技术社区分享自己的学习心得，也乐于接受具有挑战性的开发任务。</p>
-        </section>
+      <section id="intro" class="content-card">
+        <h2>个人介绍</h2>
+        <p>
+          大家好，我是张三，从事前端开发工作3年，擅长HTML5、CSS3、JavaScript等技术栈，熟悉Vue、React框架，致力于打造高效、美观、易用的前端页面。
+        </p>
+        <p>
+          性格开朗，具备良好的团队协作能力，喜欢在技术社区分享自己的学习心得，也乐于接受具有挑战性的开发任务。
+        </p>
+      </section>
 
-        <section id="skills" class="content-card">
-            <h2>技能清单</h2>
-            <ul>
-                <li>前端基础：HTML5（语义化标签）、CSS3（Flex/Grid）、JavaScript（ES6+）</li>
-                <li>前端框架：Vue3 + Vite、React + React Router</li>
-                <li>工程化：Webpack、Git、Eslint</li>
-                <li>其他：响应式布局、移动端开发、简单后端接口对接</li>
-            </ul>
-        </section>
+      <section id="skills" class="content-card">
+        <h2>技能清单</h2>
+        <ul>
+          <li>
+            前端基础：HTML5（语义化标签）、CSS3（Flex/Grid）、JavaScript（ES6+）
+          </li>
+          <li>前端框架：Vue3 + Vite、React + React Router</li>
+          <li>工程化：Webpack、Git、Eslint</li>
+          <li>其他：响应式布局、移动端开发、简单后端接口对接</li>
+        </ul>
+      </section>
 
-        <section id="experience" class="content-card">
-            <h2>项目经历</h2>
-            <h3>企业官网重构项目</h3>
-            <p>负责将传统企业官网重构为语义化结构，优化页面加载速度30%，适配移动端设备，提升用户体验。</p>
-            <h3>管理系统前端开发</h3>
-            <p>基于Vue3 + Element Plus开发后台管理系统，实现数据展示、增删改查、权限控制等功能。</p>
-        </section>
+      <section id="experience" class="content-card">
+        <h2>项目经历</h2>
+        <h3>企业官网重构项目</h3>
+        <p>
+          负责将传统企业官网重构为语义化结构，优化页面加载速度30%，适配移动端设备，提升用户体验。
+        </p>
+        <h3>管理系统前端开发</h3>
+        <!-- <p> -->
+          基于Vue3 + Element
+          Plus开发后台管理系统，实现数据展示、增删改查、权限控制等功能。
+        </p>
+      </section>
+
+      <section class="form-contaioner">
+        <h2>留言给我</h2>
+        <div class="form-item"><label for="username"f>你的名字</label></div>
+                       </section>
     </main>
 
     <footer id="contact">
-        <p>联系方式：138XXXX1234 | zhangsan@example.com</p>
-        <p>© 2025 张三 版权所有</p>
+      <p>联系方式：138XXXX1234 | zhangsan@example.com</p>
+      <p>© 2025 张三 版权所有</p>
     </footer>
-</body>
+  </body>
 </html>
