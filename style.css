@@ -1,87 +1,150 @@
 /* style.css - 个人主页样式文件 */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Microsoft Yahei", "微软雅黑", sans-serif;
-    font-size: 16px;
-    line-height: 1.8;
-    color: #333;
-    background-color: #f9f9f9;
-    padding: 0 20px;
+  font-family: "Microsoft Yahei", "微软雅黑", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 0 20px;
+  background-image: url("https://picsum.photos/id/1076/1920/1080");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
+/* 元素选择器：美化头部header */
 header {
-    background-color: #4285f4;
-    color: white;
-    padding: 30px 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-    text-align: center;
+  background-color: rgba(66, 133, 244, 0.75);
+  color: white;
+  padding: 30px 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 1.5;
 }
 
+/* 元素选择器：美化导航栏——文本居中 */
 nav {
-    background-color: #333;
-    padding: 15px;
-    margin: 10px 0 20px;
-    border-radius: 8px;
-    text-align: center;
+  background-color: rgba(51, 51, 51, 0.9);
+  padding: 15px;
+  margin: 10px 0 20px;
+  border-radius: 8px;
+  text-align: center;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  display: inline-block;
+  line-height: 1;
 }
 
 nav a:hover {
-    color: #4285f4;
+  color: #4285f4;
 }
 
-nav a:active{
-    color: blueviolet;
+nav a:active {
+  color: blueviolet;
 }
 
+/* 主容器：包裹浮动元素，解决塌陷核心 */
 main {
-    max-width: 1000px;
-    margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* 头像模块：左浮动 */
+.user-avatar {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 10px;
+}
+
+/* 头像样式 */
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid #4285f4;
+  /* 圆角设置 */
+  border-radius: 50%;
+  /* 防止图片变形 */
+  object-fit: cover;
+  /* 添加鼠标悬浮效果 */
+  transition: all 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(3); /*放大1.05倍*/
+  border-color: #359469; /*边框颜色加深*/
+  box-shadow: 0 0 10px rgba(53, 148, 105, 0.5); /*阴影效果*/
 }
 
 .content-card {
-    background-color: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* 父容器：清除左右浮动 */
+.user-info::after {
+  content: "";
+  display: block;
+  clear: both; /*清除左右浮动*/
+  visibility: hidden;
+  height: 0;
+}
+
+/* 父容器：BFC特性 */
+.user-info {
+  overflow: hidden; /*触发BFC,包裹浮动子元素*/
+  width: 100%;
+}
+
+/* 个人介绍：左浮动+宽度占比 */
 #intro {
-    border-left: 5px solid #4285f4;
+  border-left: 5px solid #4285f4;
+  float: left; /*左浮动*/
+  width: 55%;
+}
+
+#skills{
+  border-left: 5px solid #4285f4;
 }
 
 h2 {
-    color: #2d3748;
-    font-size: 22px;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
+  color: #2d3748;
+  font-size: 22px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
 }
 
 ul {
-    margin-left: 20px;
-    color: #4a5568;
+  margin-left: 20px;
+  color: #4a5568;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    margin: 30px 0 20px;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 14px;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  margin: 30px 0 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
 }
